@@ -5,7 +5,7 @@ class ListaUso {
     ElementoUso ultimo; 
 
     public ListaUso() {
-        primeiro = null;
+        primeiro = new ElementoUso();
         ultimo = primeiro;
     }
 

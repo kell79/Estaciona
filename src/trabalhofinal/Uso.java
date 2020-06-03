@@ -1,21 +1,27 @@
 package trabalhofinal;
 
 import java.util.Random;
-import java.util.Timer;
+import java.util.Date;
 
 public class Uso {
-
     int idUso;
-    Carro carro;
-    Vaga vaga;
-    Timer horaEntrada;
-    Timer horaSaida;
+    String placa;
+    int idVaga;
+    Date horaEntrada;
+    Date horaSaida;
 
-    public Uso(Carro c, Vaga v, Timer entrada, Timer saida) {
+    public Uso(){
+        this.idUso = 0;
+        this.placa = "XXXX";
+        this.idVaga = 0;
+        this.horaEntrada = new Date();
+        this.horaSaida = new Date();
+    }
 
+    public Uso(String p, int v, Date entrada, Date saida) {
         this.idUso = Random.class.hashCode();
-        this.carro = c;
-        this.vaga = v;
+        this.placa = p;
+        this.idVaga = v;
         this.horaEntrada = entrada;
         this.horaSaida = saida;
     }
